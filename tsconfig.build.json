@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "rootDir": ".",
+        "noEmit": false
+    },
+    "include": ["UiTests/src/**/*.ts", "ApiTests/src/**/*.ts", "playwright.config.ts", "tools/**/*.mjs"],
+    "exclude": ["**/*.spec.ts", "UiTests/tests/**", "ApiTests/tests/**"]
+}

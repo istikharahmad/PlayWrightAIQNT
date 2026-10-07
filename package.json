@@ -1,0 +1,53 @@
+{
+    "name": "theo-next-gen-e2e-tests-ts",
+    "private": true,
+    "type": "module",
+    "main": "index.js",
+    "dependencies": {
+        "@dotenvx/dotenvx": "^1.60.2",
+        "@types/speakeasy": "^2.0.10",
+        "chance": "^1.1.13",
+        "date-fns": "^4.1.0",
+        "http-status-codes": "^2.3.0",
+        "jsdom": "^29.0.2",
+        "speakeasy": "^2.0.0",
+        "winston": "^3.19.0"
+    },
+    "devDependencies": {
+        "@eslint/compat": "^2.0.5",
+        "@eslint/eslintrc": "^3.3.5",
+        "@eslint/js": "^10.0.1",
+        "@playwright/test": "^1.62.1",
+        "@types/chance": "1.1.7",
+        "@types/jsdom": "^28.0.1",
+        "@types/node": "25.5.2",
+        "eslint": "10.2.0",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-playwright": "2.10.1",
+        "globals": "^17.4.0",
+        "husky": "9.1.7",
+        "lint-staged": "16.4.0",
+        "prettier": "3.8.1",
+        "ts-node": "10.9.2",
+        "typescript": "6.0.2",
+        "typescript-eslint": "^8.58.1"
+    },
+    "scripts": {
+        "compile": "tsc --noEmit",
+        "test": "npx playwright install chromium && npx playwright test",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "prettier": "prettier . --write",
+        "report": "npx playwright show-report",
+        "prepare": "husky",
+        "audit": "npm audit --omit=dev",
+        "reports-setup": "mkdir -p reports"
+    },
+    "lint-staged": {
+        "*.{ts,js}": [
+            "eslint --fix",
+            "prettier --write",
+            "git add"
+        ]
+    }
+}

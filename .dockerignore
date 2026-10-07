@@ -1,0 +1,15 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+logs/
+.git/
+.vscode/
+.env
+.env.*
+!.env.example
+*.log
+specs/
+README.md
